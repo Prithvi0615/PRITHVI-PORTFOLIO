@@ -1,0 +1,11 @@
+{
+  "buildCommand": "BASE_PATH=/ PORT=21113 pnpm --filter @workspace/portfolio build",
+  "outputDirectory": "artifacts/portfolio/dist/public",
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://prithvi-portfolio-api.onrender.com/api/:path*"
+    }
+  ]
+}
