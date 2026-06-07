@@ -47,3 +47,13 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Local scripts
+run-local.bat
