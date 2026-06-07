@@ -74,26 +74,59 @@ export default function Home() {
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus("submitting");
+    const web3FormsKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formState),
-      });
-      const data = await response.json();
-      if (response.ok) {
-        setFormStatus("success");
-        setFormFeedback(data.message || "Thank you for reaching out! I will get back to you shortly.");
-        setFormState({ name: "", email: "", message: "" });
+      let response;
+      let data;
+
+      if (web3FormsKey) {
+        // Submit to Web3Forms to send email directly to user's inbox
+        response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            access_key: web3FormsKey,
+            subject: `New Portfolio Message from ${formState.name}`,
+            name: formState.name,
+            email: formState.email,
+            message: formState.message,
+          }),
+        });
+        data = await response.json();
+        if (response.ok && data.success) {
+          setFormStatus("success");
+          setFormFeedback("Thank you for reaching out! I will get back to you shortly.");
+          setFormState({ name: "", email: "", message: "" });
+        } else {
+          setFormStatus("error");
+          setFormFeedback(data.message || "Something went wrong. Please check fields and try again.");
+        }
       } else {
-        setFormStatus("error");
-        setFormFeedback(data.error || "Something went wrong. Please check fields and try again.");
+        // Fallback to local Express API
+        response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formState),
+        });
+        data = await response.json();
+        if (response.ok) {
+          setFormStatus("success");
+          setFormFeedback(data.message || "Thank you for reaching out! I will get back to you shortly.");
+          setFormState({ name: "", email: "", message: "" });
+        } else {
+          setFormStatus("error");
+          setFormFeedback(data.error || "Something went wrong. Please check fields and try again.");
+        }
       }
     } catch (err) {
       setFormStatus("error");
-      setFormFeedback("Failed to send message. Please verify the backend server is running.");
+      setFormFeedback("Failed to send message. Please verify the connection is active.");
     }
   };
 
