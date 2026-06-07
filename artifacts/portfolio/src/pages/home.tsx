@@ -627,6 +627,10 @@ export default function Home() {
                   <Phone className="h-5 w-5 text-primary shrink-0" />
                   <span>9453044441</span>
                 </a>
+                <a href="https://www.linkedin.com/in/prithvi-dev-singh-177aa5293" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+                  <Linkedin className="h-5 w-5 text-primary shrink-0" />
+                  <span>linkedin.com/in/prithvi-dev-singh-177aa5293</span>
+                </a>
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <MapPin className="h-5 w-5 text-primary shrink-0" />
                   <span>Lucknow, Uttar Pradesh, India</span>
