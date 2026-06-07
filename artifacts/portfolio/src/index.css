@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Instrument+Serif:ital,wght@0,400;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "@tailwindcss/typography";
@@ -77,49 +77,49 @@
 
   /* Light professional theme */
   --background: 0 0% 100%;
-  --foreground: 240 10% 3.9%;
-  --border: 240 5.9% 90%;
+  --foreground: 0 0% 0%;
+  --border: 0 0% 90%;
   
-  --card: 0 0% 99%;
-  --card-foreground: 240 10% 3.9%;
-  --card-border: 240 5.9% 90%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 0%;
+  --card-border: 0 0% 90%;
 
-  --sidebar: 240 4.8% 95.9%;
-  --sidebar-foreground: 240 5.9% 10%;
-  --sidebar-border: 240 5.9% 90%;
-  --sidebar-primary: 240 5.9% 10%;
-  --sidebar-primary-foreground: 0 0% 98%;
-  --sidebar-accent: 240 4.8% 90%;
-  --sidebar-accent-foreground: 240 5.9% 10%;
-  --sidebar-ring: 240 5.9% 10%;
+  --sidebar: 0 0% 100%;
+  --sidebar-foreground: 0 0% 0%;
+  --sidebar-border: 0 0% 90%;
+  --sidebar-primary: 0 0% 0%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 0 0% 96%;
+  --sidebar-accent-foreground: 0 0% 0%;
+  --sidebar-ring: 0 0% 0%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 240 10% 3.9%;
-  --popover-border: 240 5.9% 90%;
+  --popover-foreground: 0 0% 0%;
+  --popover-border: 0 0% 90%;
 
-  --primary: 240 5.9% 10%; /* Professional charcoal/near-black */
-  --primary-foreground: 0 0% 98%;
+  --primary: 0 0% 0%; 
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 240 4.8% 95.9%;
-  --secondary-foreground: 240 5.9% 10%;
+  --secondary: 0 0% 96%;
+  --secondary-foreground: 0 0% 0%;
 
-  --muted: 240 4.8% 95.9%;
-  --muted-foreground: 240 3.8% 46.1%;
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 40%;
 
-  --accent: 240 4.8% 95.9%;
-  --accent-foreground: 240 5.9% 10%;
+  --accent: 0 0% 96%;
+  --accent-foreground: 0 0% 0%;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
 
-  --input: 240 5.9% 90%;
-  --ring: 240 5.9% 10%;
+  --input: 0 0% 90%;
+  --ring: 0 0% 0%;
   
-  --chart-1: 240 5.9% 10%;
-  --chart-2: 240 4.8% 30%;
-  --chart-3: 240 4.8% 45%;
-  --chart-4: 240 4.8% 60%;
-  --chart-5: 240 4.8% 75%;
+  --chart-1: 0 0% 0%;
+  --chart-2: 0 0% 20%;
+  --chart-3: 0 0% 40%;
+  --chart-4: 0 0% 60%;
+  --chart-5: 0 0% 80%;
 
   --app-font-sans: 'Plus Jakarta Sans', sans-serif;
   --app-font-display: 'Playfair Display', Georgia, serif;
@@ -148,50 +148,50 @@
 }
 
 .dark {
-  --button-outline: rgba(255,255,255, .10);
-  --badge-outline: rgba(255,255,255, .05);
-  --opaque-button-border-intensity: 9;
-  --elevate-1: rgba(255,255,255, .04);
-  --elevate-2: rgba(255,255,255, .09);
+  --button-outline: rgba(0, 0, 0, .08);
+  --badge-outline: rgba(0, 0, 0, .04);
+  --opaque-button-border-intensity: -8;
+  --elevate-1: rgba(0,0,0, .02);
+  --elevate-2: rgba(0,0,0, .05);
 
-  --background: 240 10% 4%;
-  --foreground: 0 0% 98%;
-  --border: 240 10% 12%;
+  --background: 0 0% 100%;
+  --foreground: 0 0% 0%;
+  --border: 0 0% 90%;
   
-  --card: 240 10% 6%;
-  --card-foreground: 0 0% 98%;
-  --card-border: 240 10% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 0%;
+  --card-border: 0 0% 90%;
 
-  --sidebar: 240 10% 6%;
-  --sidebar-foreground: 0 0% 98%;
-  --sidebar-border: 240 10% 12%;
-  --sidebar-primary: 0 0% 98%;
-  --sidebar-primary-foreground: 240 10% 4%;
-  --sidebar-accent: 240 10% 12%;
-  --sidebar-accent-foreground: 0 0% 98%;
-  --sidebar-ring: 240 10% 12%;
+  --sidebar: 0 0% 100%;
+  --sidebar-foreground: 0 0% 0%;
+  --sidebar-border: 0 0% 90%;
+  --sidebar-primary: 0 0% 0%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 0 0% 96%;
+  --sidebar-accent-foreground: 0 0% 0%;
+  --sidebar-ring: 0 0% 0%;
 
-  --popover: 240 10% 6%;
-  --popover-foreground: 0 0% 98%;
-  --popover-border: 240 10% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 0%;
+  --popover-border: 0 0% 90%;
 
-  --primary: 0 0% 98%; 
-  --primary-foreground: 240 10% 4%;
+  --primary: 0 0% 0%; 
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 240 10% 12%;
-  --secondary-foreground: 0 0% 98%;
+  --secondary: 0 0% 96%;
+  --secondary-foreground: 0 0% 0%;
 
-  --muted: 240 10% 12%;
-  --muted-foreground: 240 5% 60%;
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 40%;
 
-  --accent: 240 10% 12%;
-  --accent-foreground: 0 0% 98%;
+  --accent: 0 0% 96%;
+  --accent-foreground: 0 0% 0%;
 
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
 
-  --input: 240 10% 16%;
-  --ring: 0 0% 98%;
+  --input: 0 0% 90%;
+  --ring: 0 0% 0%;
   
   --chart-1: 0 0% 98%;
   --chart-2: 240 10% 40%;
@@ -210,16 +210,38 @@
     scroll-behavior: smooth;
   }
 
-  h1, h2, h3 {
-    font-family: var(--app-font-display);
-    text-decoration: underline;
+  body h1, body h1.font-display {
+    font-family: 'Syne', var(--app-font-sans) !important;
+    font-weight: 800 !important;
+    text-decoration: underline !important;
+    text-underline-offset: 12px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: hsl(var(--primary)) !important;
+  }
+
+  body h2, body h2.font-display {
+    font-family: 'Playfair Display', var(--app-font-serif) !important;
+    font-weight: 700 !important;
+    text-decoration: underline !important;
     text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: hsl(var(--primary) / 60%) !important;
+  }
+
+  body h3, body h3.font-display {
+    font-family: 'Instrument Serif', var(--app-font-serif) !important;
+    font-weight: 400 !important;
+    font-size: 1.75em !important;
+    font-style: italic !important;
+    text-decoration: underline !important;
+    text-underline-offset: 6px;
     text-decoration-thickness: 1.5px;
-    text-decoration-color: hsl(var(--primary) / 30%);
+    text-decoration-color: hsl(var(--primary) / 45%) !important;
   }
 
   h4, h5, h6 {
-    font-family: var(--app-font-display);
+    font-family: var(--app-font-sans);
+    font-weight: 600;
   }
 }
 
