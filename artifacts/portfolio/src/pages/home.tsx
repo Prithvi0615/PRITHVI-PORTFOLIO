@@ -41,7 +41,7 @@ export default function Home() {
       setShowBackToTop(window.scrollY > 300);
 
       // Active Section Highlight
-      const sections = ["home", "about", "internships", "skills", "education", "certifications", "achievements", "profiles", "resume", "contact"];
+      const sections = ["home", "about", "internships", "skills", "education", "certifications", "achievements", "profiles", "contact"];
       const current = sections.find((section) => {
         const el = document.getElementById(section);
         if (el) {
@@ -250,9 +250,6 @@ export default function Home() {
               <motion.div variants={fadeIn} className="flex flex-wrap gap-4">
                 <Button size="lg" onClick={() => scrollTo("internships")} className="font-semibold px-6 shadow-sm">
                   View Experience
-                </Button>
-                <Button size="lg" variant="outline" onClick={() => scrollTo("resume")} className="font-semibold px-6 border-border hover:bg-secondary">
-                  <FileText className="mr-2 h-4 w-4" /> Resume
                 </Button>
                 <Button asChild size="lg" variant="outline" className="p-3 border-border hover:bg-secondary">
                   <a href="https://github.com/Prithvi0615" target="_blank" rel="noreferrer" aria-label="GitHub">
@@ -603,48 +600,7 @@ export default function Home() {
           </div>
         </motion.section>
 
-        {/* RESUME SECTION */}
-        <motion.section 
-          id="resume" 
-          className="py-24 border-t border-border/50"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeIn}
-        >
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-6">
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Professional Resume</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                View or download my comprehensive software engineering resume containing full details on B.Tech coursework, projects, internships, and technical competencies.
-              </p>
-              
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" asChild className="font-semibold shadow-sm">
-                  <a href="/resume.pdf" download="Prithvi_Dev_Singh_Resume.pdf">
-                    <Download className="mr-2 h-4 w-4" /> Download PDF
-                  </a>
-                </Button>
-                <Button size="lg" variant="outline" asChild className="font-semibold border-border hover:bg-secondary">
-                  <a href="/resume.pdf" target="_blank" rel="noreferrer">
-                    <ExternalLink className="mr-2 h-4 w-4" /> Open/View PDF
-                  </a>
-                </Button>
-              </div>
-            </div>
 
-            <div className="lg:col-span-6 flex justify-center">
-              <Card className="w-full max-w-md bg-secondary/20 border-border/60 p-6 flex flex-col justify-center items-center shadow-lg relative group">
-                <div className="h-72 w-full rounded-md border border-border bg-background/50 flex flex-col justify-center items-center p-4 relative overflow-hidden">
-                  <FileText className="h-16 w-16 text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
-                  <span className="font-bold text-foreground font-display text-lg mb-1">Prithvi_Dev_Singh_Resume.pdf</span>
-                  <span className="text-xs text-muted-foreground">PDF Document • Size ~150 KB</span>
-                  <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-              </Card>
-            </div>
-          </div>
-        </motion.section>
 
         {/* CONTACT SECTION */}
         <motion.section 
